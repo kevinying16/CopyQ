@@ -5,16 +5,19 @@ image:
 - Visual Studio 2017
 
 environment:
+  BOOST_ROOT: 'C:\Libraries\boost_1_69_0'
+  BUILD_CONFIGURATION: Release
+
   matrix:
-    - QTDIR: C:\Qt\5.12.5\mingw73_32
-      CMAKE_GENERATOR: MinGW Makefiles
-      MINGW_PATH: C:\Qt\Tools\mingw730_32
+    #- QTDIR: C:\Qt\5.12.5\mingw73_32
+    #  CMAKE_GENERATOR: MinGW Makefiles
+    #  MINGW_PATH: C:\Qt\Tools\mingw730_32
+    #  LIBDL_VERSION: '1.2.0'
 
     - QTDIR: C:\Qt\5.12.5\msvc2017_64
       CMAKE_GENERATOR: Visual Studio 15 2017
       CMAKE_GENERATOR_ARCH: x64
       CMD_VCVARS: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat'
-      BUILD_SUB_DIR: Debug
 
 # Parameters for default build commands (build_script is used instead).
 build:

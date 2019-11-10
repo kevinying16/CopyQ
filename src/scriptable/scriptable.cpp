@@ -1671,6 +1671,11 @@ void Scriptable::fail()
     abortEvaluation(Abort::CurrentEvaluation);
 }
 
+void Scriptable::crash()
+{
+    ::abort();
+}
+
 #ifdef HAS_TESTS
 void Scriptable::keys()
 {
